@@ -224,7 +224,7 @@ def test_parse_status_tolerates_short_frame() -> None:
 def test_parse_status_preserves_enthalpy_mode_without_sensor() -> None:
     coord = make_coordinator()
     data = bytearray(11)
-    data[9] = 2  # enthalpy exchanger present, without sensor
+    data[9] = 2  # exchanger present, no enthalpy sensor installed
 
     coord._parse_status(bytes(data))
 
